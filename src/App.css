@@ -38,7 +38,7 @@
 }
 
 .loginContainer{
-  display: flex;
+  display: flex;                                          /*Only impacts direct children*/
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -52,8 +52,17 @@
   display:flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   -webkit-box-shadow: 5px 5px 15px 5px #e0e0e0;
   box-shadow: 5px 5px 15px 5px #e0e0e0;
+}
+
+.login header{
+  font-weight:bold;
+}
+
+.login form{
+  height:70%;
 }
 
 .login input{
