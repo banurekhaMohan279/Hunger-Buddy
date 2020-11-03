@@ -6,7 +6,7 @@ Changes in pages for
 1.Router
 Components/App.js, routes.js, index.js
 
-Notes/Revisit
+Notes-Revisit
 1. Centering nested children with flexbox
 2. React-router vs React-router-dom
   https://reactrouter.com/web/guides/quick-start
