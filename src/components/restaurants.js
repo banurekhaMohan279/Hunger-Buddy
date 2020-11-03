@@ -1,10 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 class Restaurants extends React.Component{
   render(){
     return(
-      <h1> Restaurant List </h1>
+      <div className = "homePage">
+        <header> Food Delivery App </header>
+      </div>
     )
   }
 }

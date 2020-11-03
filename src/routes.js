@@ -1,8 +1,8 @@
 import React from 'react';
-import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
-import App from './App';
-import Restaurants from './restaurants.js';
+import App from './components/App';
+import Restaurants from './components/restaurants.js';
 
 export default function Routes() {
   return(
