@@ -84,6 +84,10 @@
 }
 
 /*-----------------------Home page styles-------------------------*/
+.homePage{
+  height:100%;
+}
+
 .homePage header{
   width:100%;
   font-weight:bold;
@@ -91,4 +95,15 @@
   padding:1%;
   color: #fafafa;
   background: #263238;
+}
+
+.homePage form{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height:100vh;
+}
+
+.homePage input{
+  padding:0.5%;
 }
