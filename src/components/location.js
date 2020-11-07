@@ -3,7 +3,7 @@ import {getRestaurantCategories} from '../actions/restaurants';
 import getCities from '../actions/cities';
 import {connect} from 'react-redux';
 
-class Restaurants extends React.Component{
+class Location extends React.Component{
   constructor(props){
       super(props);
       this.state = {location : ''};
@@ -47,4 +47,4 @@ function mapStateToProps(state){
   }
 }
 
-export default connect(mapStateToProps)(Restaurants);
+export default connect(mapStateToProps)(Location);

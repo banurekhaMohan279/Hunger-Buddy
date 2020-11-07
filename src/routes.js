@@ -2,7 +2,7 @@ import React from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 import App from './components/App';
-import Restaurants from './components/restaurants.js';
+import Location from './components/location.js';
 
 export default function Routes() {
   return(
@@ -12,7 +12,7 @@ export default function Routes() {
             <App />
           </Route>
           <Route path = '/Home'>
-            <Restaurants />
+            <Location />
           </Route>
         </Switch>
       </Router>
