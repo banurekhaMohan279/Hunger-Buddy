@@ -1,23 +1,23 @@
 import restaurantsApi from '../entities/restaurantsApi.js';
 
-export function getRestaurantCategories() {
+export function getAllRestaurants() {
   return dispatch => { //
-    return restaurantsApi.getRestaurantCategories()
+    return restaurantsApi.getAllRestaurants()
     .then(response => {
       if(response.error) {
-        dispatch(getCategoriesFailure('Get Categories Failure'));
+        dispatch(getRestaurantsFailure('Get Categories Failure'));
       }
       else {
-        dispatch(getCategoriesSuccess(response));
+        dispatch(getRestaurantsSuccess(response));
       }
     })
   }
 }
 
-function getCategoriesFailure(msg){
-  return {type: 'GET_CATEGORIES_FAILURE', msg};
+function getRestaurantsFailure(msg){
+  return {type: 'GET_RESTAURANTS_FAILURE', msg};
 }
 
-function getCategoriesSuccess(response){
-  return {type : 'GET_CATEGORIES_SUCCESS', response};
+function getRestaurantsSuccess(response){
+  return {type : 'GET_RESTAURANTS_SUCCESS', response};
 }

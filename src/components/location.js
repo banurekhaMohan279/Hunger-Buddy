@@ -1,5 +1,5 @@
 import React from 'react';
-import {getRestaurantCategories} from '../actions/restaurants';
+import {getAllRestaurants} from '../actions/restaurants';
 import getCities from '../actions/cities';
 import {connect} from 'react-redux';
 
@@ -12,7 +12,7 @@ class Location extends React.Component{
   }
 
   componentDidMount(){
-      //this.props.dispatch(getRestaurantCategories())
+      //this.props.dispatch(getAllRestaurants())
       //.then(() => console.log("categories",this.props.categories));
   }
 
