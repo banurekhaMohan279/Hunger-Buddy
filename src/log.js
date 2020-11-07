@@ -12,6 +12,8 @@ Changes in pages for
 Notes-Revisit
 1. Centering nested children with flexbox
 2. React-router vs React-router-dom
+  // usehistory for stateless/fucntion components
+  //withRouter for class components
   https://reactrouter.com/web/guides/quick-start
   https://codeburst.io/getting-started-with-react-router-5c978f70df91
 3. Provider makes redux store available to nested components wrapped in connect() function

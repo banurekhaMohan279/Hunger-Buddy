@@ -5,7 +5,7 @@ export function getAllRestaurants() {
     return restaurantsApi.getAllRestaurants()
     .then(response => {
       if(response.error) {
-        dispatch(getRestaurantsFailure('Get Categories Failure'));
+        dispatch(getRestaurantsFailure('Get Restaurants Failure'));
       }
       else {
         dispatch(getRestaurantsSuccess(response));

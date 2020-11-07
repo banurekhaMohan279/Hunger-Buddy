@@ -2,6 +2,7 @@ import React from 'react';
 import {getAllRestaurants} from '../actions/restaurants';
 import getCities from '../actions/cities';
 import {connect} from 'react-redux';
+import {withRouter} from 'react-router-dom';
 
 class Location extends React.Component{
   constructor(props){
@@ -18,7 +19,7 @@ class Location extends React.Component{
 
   locationSubmit(event) {
     event.preventDefault();
-    this.props.dispatch(getCities(this.state.location)).then(()=>console.log("city details",this.props.cities))
+    this.props.dispatch(getCities(this.state.location)).then( () => {this.props.history.push('/Restaurants')} );
   }
 
   locationChange(event){
@@ -41,9 +42,8 @@ class Location extends React.Component{
 
 function mapStateToProps(state){
   return {
-    categories : state.restaurantsReducer.categories, // check how reducer accessed here
     cities : state.getCitiesReducer.cities
   }
 }
 
-export default connect(mapStateToProps)(Location);
+export default withRouter(connect(mapStateToProps)(Location));
