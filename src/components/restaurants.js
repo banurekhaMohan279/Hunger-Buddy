@@ -8,14 +8,18 @@ class Restaurants extends React.Component{
   }
 
   componentDidMount(){
-    this.props.dispatch(getAllRestaurants);
+    this.props.dispatch(getAllRestaurants());
   }
 
   render(){
-    let restaurants = this.props.resturants;
+    let restaurants = this.props.restaurants.restaurants;
     console.log("restaurants",restaurants);
     return(
-        <div> Restaurants</div>
+      <div>
+        {restaurants &&
+          <h3> Loading.. </h3>
+        }
+      </div>
     )
   }
 
