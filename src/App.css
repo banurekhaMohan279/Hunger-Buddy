@@ -107,3 +107,13 @@
 .homePage input{
   padding:0.5%;
 }
+
+/*Restaurant page styles*/
+.restaurantList {
+  display:flex;
+  flex-wrap:wrap;
+}
+
+.restaurant{
+  margin:2%;
+}

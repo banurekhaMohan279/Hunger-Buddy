@@ -11,13 +11,22 @@ class Restaurants extends React.Component{
     this.props.dispatch(getAllRestaurants());
   }
 
+
+
   render(){
-    let restaurants = this.props.restaurants.restaurants;
+    let restaurants = this.props.restaurants && this.props.restaurants.restaurants;
     console.log("restaurants",restaurants);
     return(
-      <div>
+      <div className = "restaurantList">
         {restaurants &&
-          <h3> Loading.. </h3>
+          restaurants.map ( (item,index) => {
+            return  (
+              <div className = {"restaurant restaurant"+index}>
+                <img src = {item.restaurant.thumb} alt = {item.restaurant.name} className = "restaurantThumbNail" />
+                <h4 className = "restaurantName"> {item.restaurant.name} </h4>
+              </div>
+            );
+          })
         }
       </div>
     )
