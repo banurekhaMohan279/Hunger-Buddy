@@ -5,7 +5,7 @@ function App() {
 
   function goToHomePage(event){
     event.preventDefault();
-    history.push('/Home');
+    history.push('/Location');
   }
 
   return (

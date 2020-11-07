@@ -11,7 +11,7 @@ export default function Routes() {
           <Route exact path = '/'>
             <App />
           </Route>
-          <Route path = '/Home'>
+          <Route path = '/Location'>
             <Location />
           </Route>
         </Switch>
