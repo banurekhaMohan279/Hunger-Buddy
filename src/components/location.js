@@ -12,8 +12,8 @@ class Location extends React.Component{
   }
 
   componentDidMount(){
-      this.props.dispatch(getRestaurantCategories())
-      .then(() => console.log("categories",this.props.categories));
+      //this.props.dispatch(getRestaurantCategories())
+      //.then(() => console.log("categories",this.props.categories));
   }
 
   locationSubmit(event) {
@@ -24,7 +24,6 @@ class Location extends React.Component{
   locationChange(event){
     let loc = event.target.value;
     this.setState ({location:loc});
-    console.log("state",this.state);
   }
 
   render(){
