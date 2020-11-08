@@ -2,17 +2,21 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {getAllRestaurants} from '../actions/restaurants';
 import AppHeader from './AppHeader';
+import {withRouter} from 'react-router-dom';
 
 class Restaurants extends React.Component{
   constructor(props){
     super(props);
+    this.getRestaurantDetails = this.getRestaurantDetails.bind(this);
   }
 
   componentDidMount(){
     this.props.dispatch(getAllRestaurants());
   }
 
-
+  getRestaurantDetails(){
+      this.props.history.push('/RestaurantDetails');
+  }
 
   render(){
     let restaurants = this.props.restaurants && this.props.restaurants.restaurants;
@@ -23,7 +27,7 @@ class Restaurants extends React.Component{
             {restaurants &&
               restaurants.map ( (item,index) => {
                 return  (
-                  <div className = "restaurant" key = {"restaurant"+index}>
+                  <div className = "restaurant" key = {"restaurant"+index} onClick = {this.getRestaurantDetails}>
                     <img src = {item.restaurant.thumb} alt = {item.restaurant.name} className = "restaurantThumbNail" />
                     <h4 className = "restaurantName"> {item.restaurant.name} </h4>
                     <span>☆{item.restaurant.user_rating.aggregate_rating}</span>
@@ -46,4 +50,4 @@ function mapStateToProps(state){
   }
 }
 
-export default connect(mapStateToProps)(Restaurants);
+export default withRouter(connect(mapStateToProps)(Restaurants));
