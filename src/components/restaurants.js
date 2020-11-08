@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {getAllRestaurants} from '../actions/restaurants';
+import {getRestaurantDetails} from '../actions/restaurantDetails';
 import AppHeader from './AppHeader';
 import {withRouter} from 'react-router-dom';
 
@@ -14,8 +15,10 @@ class Restaurants extends React.Component{
     this.props.dispatch(getAllRestaurants());
   }
 
-  getRestaurantDetails(){
-      this.props.history.push('/RestaurantDetails');
+  getRestaurantDetails(res_id){
+      this.props.dispatch(getRestaurantDetails(res_id)).then (() => {
+        this.props.history.push('/RestaurantDetails');
+      });
   }
 
   render(){
@@ -27,7 +30,8 @@ class Restaurants extends React.Component{
             {restaurants &&
               restaurants.map ( (item,index) => {
                 return  (
-                  <div className = "restaurant" key = {"restaurant"+index} onClick = {this.getRestaurantDetails}>
+                  <div className = "restaurant" key = {"restaurant"+index}
+                  onClick = {(e) => this.getRestaurantDetails(item.restaurant.R.res_id)}>
                     <img src = {item.restaurant.thumb} alt = {item.restaurant.name} className = "restaurantThumbNail" />
                     <h4 className = "restaurantName"> {item.restaurant.name} </h4>
                     <span>☆{item.restaurant.user_rating.aggregate_rating}</span>
