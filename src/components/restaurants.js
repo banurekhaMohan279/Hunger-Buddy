@@ -23,9 +23,10 @@ class Restaurants extends React.Component{
             {restaurants &&
               restaurants.map ( (item,index) => {
                 return  (
-                  <div className = {"restaurant restaurant"+index}>
+                  <div className = "restaurant" key = {"restaurant"+index}>
                     <img src = {item.restaurant.thumb} alt = {item.restaurant.name} className = "restaurantThumbNail" />
                     <h4 className = "restaurantName"> {item.restaurant.name} </h4>
+                    <span>☆{item.restaurant.user_rating.aggregate_rating}</span>
                   </div>
                 );
               })

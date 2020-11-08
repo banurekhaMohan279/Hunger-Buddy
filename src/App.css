@@ -116,14 +116,19 @@
   align-items: center;
   justify-content: center;
   background:#fafafa;
-  transition : transform .2s;
 }
 
 .restaurant{
   margin:2%;
   cursor: pointer;
+  transition : transform .2s;
 }
 
 .restaurant:hover{
-  transform : scale(1.2);
+  transform: scale(1.1);
+}
+
+.restaurantList span{
+  font-size: 0.8em;
+  color: #403e3e;
 }

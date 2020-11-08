@@ -9,6 +9,9 @@ Changes in pages for
   Components/restaurants.js, entities/restaurantsApi.js, actions/restaurants.js, reducers/restaurantsReducer.js,
   reducers/rootReducer.js, index.js (provider, createStore)
 
+// TODO:
+sort based on rating/cuisine
+
 Notes-Revisit
 1. Centering nested children with flexbox
 2. React-router vs React-router-dom
@@ -25,4 +28,5 @@ Notes-Revisit
   https://redux.js.org/tutorials/fundamentals/part-2-concepts-data-flow
 5. css
   Image popup on hover
+  draw star rating
 */
