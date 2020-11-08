@@ -37,6 +37,16 @@
   }
 }
 
+/*Common styles*/
+.AppHeader{
+  width:100%;
+  font-weight:bold;
+  font-size: calc(10px + 2vmin);
+  padding:1%;
+  color: #fafafa;
+  background: #263238;
+}
+
 /*------------------Login Page styles---------------------*/
 
 .loginContainer{
@@ -88,15 +98,6 @@
   height:100%;
 }
 
-.homePage header{
-  width:100%;
-  font-weight:bold;
-  font-size: calc(10px + 2vmin);
-  padding:1%;
-  color: #fafafa;
-  background: #263238;
-}
-
 .homePage form{
   display:flex;
   align-items:center;
@@ -112,8 +113,17 @@
 .restaurantList {
   display:flex;
   flex-wrap:wrap;
+  align-items: center;
+  justify-content: center;
+  background:#fafafa;
+  transition : transform .2s;
 }
 
 .restaurant{
   margin:2%;
+  cursor: pointer;
+}
+
+.restaurant:hover{
+  transform : scale(1.2);
 }

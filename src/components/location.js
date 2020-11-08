@@ -1,6 +1,7 @@
 import React from 'react';
 import {getAllRestaurants} from '../actions/restaurants';
 import getCities from '../actions/cities';
+import AppHeader from './AppHeader';
 import {connect} from 'react-redux';
 import {withRouter} from 'react-router-dom';
 
@@ -10,11 +11,6 @@ class Location extends React.Component{
       this.state = {location : ''};
       this.locationSubmit = this.locationSubmit.bind(this);
       this.locationChange = this.locationChange.bind(this);
-  }
-
-  componentDidMount(){
-      //this.props.dispatch(getAllRestaurants())
-      //.then(() => console.log("categories",this.props.categories));
   }
 
   locationSubmit(event) {
@@ -30,7 +26,7 @@ class Location extends React.Component{
   render(){
     return(
       <div className = "homePage">
-        <header> Food Delivery App </header>
+        <AppHeader/>
         <form onSubmit = {this.locationSubmit}>
           <input type = "text" className = "cityName" placeholder = "Enter your location.." onChange = {this.locationChange}/>
           <input type = "submit" value = "Go"/>

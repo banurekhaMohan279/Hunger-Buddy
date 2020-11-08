@@ -23,4 +23,6 @@ Notes-Revisit
   // Need for thunk, applymiddleware, configurestore??
   // check how mapstatetoprops takes reducer state
   https://redux.js.org/tutorials/fundamentals/part-2-concepts-data-flow
+5. css
+  Image popup on hover
 */
