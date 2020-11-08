@@ -11,6 +11,7 @@ Changes in pages for
 
 // TODO:
 sort based on rating/cuisine
+on refresh needs another retaurantdetails in componentdidMount
 
 Notes-Revisit
 1. Centering nested children with flexbox
@@ -29,4 +30,5 @@ Notes-Revisit
 5. css
   Image popup on hover
   draw star rating
+6. Revisit - event handling with params
 */

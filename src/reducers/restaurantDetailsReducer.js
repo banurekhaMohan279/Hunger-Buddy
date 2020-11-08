@@ -3,7 +3,7 @@ const initialState = {
   error:null
 }
 
-export default function restaurantsReducer ( state = initialState, action ){
+export default function restaurantDetailsReducer ( state = initialState, action ){
   switch(action.type){
     case 'GET_RESTAURANT_DETAILS_FAILURE':
       return  Object.assign ({}, state, {restaurantDetails :  null, error: action.msg}); // assign to update state

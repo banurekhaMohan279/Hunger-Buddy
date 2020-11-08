@@ -132,3 +132,13 @@
   font-size: 0.8em;
   color: #403e3e;
 }
+
+/*Restuarnt details page styles*/
+.RestaurantDetails{
+  margin: 2%
+}
+
+.RestaurantDetails img {
+  max-width : 30%;
+  max-height: 30%;
+}
