@@ -28,6 +28,7 @@ Notes-Revisit
   // check how mapstatetoprops takes reducer state
   https://redux.js.org/tutorials/fundamentals/part-2-concepts-data-flow
 5. css
+  // on css change is entire page repainted i.e new network calls? or only on refresh? - hot update?
   Image popup on hover
   draw star rating
 6. Revisit - event handling with params

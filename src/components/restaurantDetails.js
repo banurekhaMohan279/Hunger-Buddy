@@ -21,8 +21,14 @@ class RestaurantDetails extends React.Component{
           <h4> {restaurantDetails.name} </h4>
           <span> {restaurantDetails.timings} </span>
           <span> {restaurantDetails.cuisines} </span>
+          <span> {restaurantDetails.phone_numbers} </span>
+          <span> {restaurantDetails.location.address} </span>
+          <div className = "rest-types">
+            {restaurantDetails.establishment.map
+              ((item) => <span className = "rest-type" key = "index"> {item} </span>) }
+          </div>
         </section>
-        
+
         <section className = "reviews-section">
         </section>
       </div>

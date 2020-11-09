@@ -136,20 +136,43 @@
 /*Restuarnt details page styles*/
 .RestaurantDetails{
   display:flex;
+  justify-content: center;
   flex-wrap:wrap;
+  background:#fafafa;
 }
 
 .RestaurantDetails .img-section {
-  width:40%;
-  padding:2%;
+  width:55%;
+  padding:2% 2% 2% 5%;
+  background:#efeeee;
+  margin-top:2%;
 }
 
 .RestaurantDetails .img-section img{
   max-width : 80%;
-  max-height: 80%;
+  transition : transform .2s;
+}
+
+.RestaurantDetails .img-section img:hover{
+  transform: scale(1.09);
 }
 
 .RestaurantDetails .details-section{
-  width:40%;
-  padding: 5% 0 2% 0;
+  width:30%;
+  padding: 5% 0 2% 2%;
+  background:#efeeee;
+  margin-top:2%;
+}
+
+.RestaurantDetails .details-section > span {
+  font-size: 0.8em;
+  display:block;
+  margin:1.5%;
+}
+
+.RestaurantDetails .details-section .rest-type{
+  background:grey;
+  padding:1%;
+  background: #d6d2cc;
+  border-radius: 25%;
 }
