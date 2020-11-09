@@ -135,10 +135,21 @@
 
 /*Restuarnt details page styles*/
 .RestaurantDetails{
-  margin: 2%
+  display:flex;
+  flex-wrap:wrap;
 }
 
-.RestaurantDetails img {
-  max-width : 30%;
-  max-height: 30%;
+.RestaurantDetails .img-section {
+  width:40%;
+  padding:2%;
+}
+
+.RestaurantDetails .img-section img{
+  max-width : 80%;
+  max-height: 80%;
+}
+
+.RestaurantDetails .details-section{
+  width:40%;
+  padding: 5% 0 2% 0;
 }

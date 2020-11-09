@@ -12,10 +12,19 @@ class RestaurantDetails extends React.Component{
     return(
       <div className = "RestaurantDetails">
         <AppHeader/>
-        <img src = {restaurantDetails.featured_image}/>
-        <h4> {restaurantDetails.name} </h4>
-        <span> {restaurantDetails.timings} </span>
-        <span> {restaurantDetails.cuisines} </span>
+
+        <section className = "img-section">
+          <img src = {restaurantDetails.featured_image}/>
+        </section>
+
+        <section className = "details-section">
+          <h4> {restaurantDetails.name} </h4>
+          <span> {restaurantDetails.timings} </span>
+          <span> {restaurantDetails.cuisines} </span>
+        </section>
+        
+        <section className = "reviews-section">
+        </section>
       </div>
     )
   }
