@@ -104,6 +104,8 @@
   align-items:center;
   justify-content:center;
   height:100vh;
+  background : url('./assets/index.jpg') no-repeat;  /*background short-hand*/
+  background-size : cover;
 }
 
 .homePage input{
