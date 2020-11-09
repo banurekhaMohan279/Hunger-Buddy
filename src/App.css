@@ -48,6 +48,13 @@
   cursor:pointer;
 }
 
+.AppHeader span {
+  font-size: 0.5em;
+  font-weight: normal;
+  display: block;
+  padding: 0.2%;
+}
+
 /*------------------Login Page styles---------------------*/
 
 .loginContainer{
