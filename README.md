@@ -1,4 +1,8 @@
-# React Food Delivery App
+# React Food Delivery App - Hunger Buddy
+
+Built With:
+
+[Zomato Developers API](https://developers.zomato.com/api)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
