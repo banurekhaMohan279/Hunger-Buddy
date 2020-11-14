@@ -4,9 +4,7 @@ import AppHeader from './AppHeader';
 
 // on refresh needs another retsuarntdetails in compoentdidMount
 class RestaurantDetails extends React.Component{
-  constructor(props){
-    super(props);
-  }
+
   render(){
     let restaurantDetails = this.props.restaurantDetails;
     return(

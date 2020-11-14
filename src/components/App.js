@@ -1,6 +1,7 @@
 import {useHistory} from 'react-router-dom';
 
 function App() {
+  console.log("in appp..")
   let history = useHistory();
 
   function goToHomePage(event){

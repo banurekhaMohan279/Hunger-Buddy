@@ -1,5 +1,4 @@
 import React from 'react';
-import {getAllRestaurants} from '../actions/restaurants';
 import getCities from '../actions/cities';
 import AppHeader from './AppHeader';
 import {connect} from 'react-redux';
