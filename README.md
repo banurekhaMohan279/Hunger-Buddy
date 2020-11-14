@@ -8,6 +8,12 @@ Available at:
 
 https://banurekhamohan279.github.io/Food-Delivery-App/
 
+Tech Stack:
+
+React-Redux
+HTML
+CSS
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
