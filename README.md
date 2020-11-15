@@ -1,6 +1,6 @@
 # React Food Delivery App - Hunger Buddy
 
-### Built With:
+### Built With API from:
 
 [Zomato Developers API](https://developers.zomato.com/api)
 
