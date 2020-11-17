@@ -1,3 +1,7 @@
+html,body,#root,.App{
+  height:100%;
+}
+
 .App {
   text-align: center;
 }
@@ -61,14 +65,14 @@
   display: flex;                                          /*Only impacts direct children*/
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100%;
   background:#fafafa;
   font-family:sans-serif; /*Check here*/
 }
 
 .login{
-  width:30vw;
-  height:40vh;
+  width:30%;
+  height:40%;
   display:flex;
   justify-content: center;
   align-items: center;
@@ -100,6 +104,22 @@
   background:#009688;
   color:#ffffff;
 }
+
+@media only screen and (max-width: 400px) {
+  .login{
+    width:70%;
+    height:40%;
+  }
+}
+
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+  .login{
+    width:50%;
+    height:30%;
+  }
+}
+
+
 
 /*-----------------------Home page styles-------------------------*/
 .homePage{

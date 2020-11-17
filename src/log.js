@@ -14,6 +14,7 @@ sort based on rating/cuisine
 on refresh needs another retaurantdetails in componentdidMount
 pagination
 lazy loading
+responsiveness
 
 Notes-Revisit
 1. Centering nested children with flexbox
