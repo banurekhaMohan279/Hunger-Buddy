@@ -159,6 +159,10 @@ html,body,#root,.App{
   transition : transform .2s;
 }
 
+.restaurantList .restaurant .restaurantName{
+  width:90%;
+}
+
 .restaurant:hover{
   transform: scale(1.1);
 }
