@@ -121,7 +121,7 @@ html,body,#root,.App{
 
 
 
-/*-----------------------Home page styles-------------------------*/
+/*-----------------------Location page styles-------------------------*/
 .homePage{
   height:100%;
 }
@@ -152,8 +152,9 @@ html,body,#root,.App{
   background:#fafafa;
 }
 
-.restaurant{
+.restaurantList .restaurant{
   margin:2%;
+  min-width:20%;
   cursor: pointer;
   transition : transform .2s;
 }
@@ -167,7 +168,7 @@ html,body,#root,.App{
   color: #403e3e;
 }
 
-/*Restuarnt details page styles*/
+/*Restaurant details page styles*/
 .RestaurantDetails{
   display:flex;
   justify-content: center;
