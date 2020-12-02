@@ -10,7 +10,7 @@ export default function Routes() {
   return(
       <Router>
         <Switch>
-          <Route exact path = '/Food-Delivery-App'>
+          <Route exact path = '/Hunger-Buddy'>
             <App />
           </Route>
           <Route path = '/Location'>
