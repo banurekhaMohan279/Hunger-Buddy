@@ -4,9 +4,7 @@
 
 [Zomato Developers API](https://developers.zomato.com/api)
 
-### Available at:
-
-https://banurekhamohan279.github.io/Food-Delivery-App/
+### [Demo Here](https://banurekhamohan279.github.io/Food-Delivery-App/)
 
 ### Tech Stack:
 
@@ -15,6 +13,12 @@ https://banurekhamohan279.github.io/Food-Delivery-App/
 * Webpack
 * HTML
 * CSS
+
+### Screenshots:
+
+![Screenshot 1](https://github.com/banurekhaMohan279/Hunger-Buddy/blob/master/src/assets/screenshot1.png)
+
+![Screenshot 2](https://github.com/banurekhaMohan279/Hunger-Buddy/blob/master/src/assets/screenshot2.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
