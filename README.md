@@ -10,7 +10,7 @@
 
 ### Tech Stack:
 
-* React - Redux
+* React JS - Redux
 * Babel
 * Webpack
 * HTML
