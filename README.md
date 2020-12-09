@@ -6,9 +6,11 @@
 
 ### [Demo Here](https://banurekhamohan279.github.io/Food-Delivery-App/)
 
+### ![App At Work](https://github.com/banurekhaMohan279/Hunger-Buddy/blob/master/src/assets/workingModel.gif)
+
 ### Tech Stack:
 
-* React - Redux
+* React JS - Redux
 * Babel
 * Webpack
 * HTML
