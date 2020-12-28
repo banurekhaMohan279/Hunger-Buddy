@@ -1,44 +1,37 @@
-import React from 'react';
+/** Restructuring the document for React Hooks ***/
+import React, {useState} from 'react';
 import getCities from '../actions/cities';
 import AppHeader from './AppHeader';
-import {connect} from 'react-redux';
-import {withRouter} from 'react-router-dom';
+import {connect, useDispatch} from 'react-redux';
+import {useHistory} from 'react-router-dom';
 
-class Location extends React.Component{
-  constructor(props){
-      super(props);
-      this.state = {location : ''};
-      this.locationSubmit = this.locationSubmit.bind(this);
-      this.locationChange = this.locationChange.bind(this);
-  }
+function Location() {
+  const [location, setLocation] = useState('');
+  let history = useHistory();
+  let dispatch = useDispatch();
 
-  locationSubmit(event) {
+  function locationSubmit(event) {
     event.preventDefault();
-    this.props.dispatch(getCities(this.state.location)).then( () => {this.props.history.push('/Restaurants')} );
+    dispatch(getCities({location})).then( () => {history.push('/Restaurants')} );
   }
 
-  locationChange(event){
+  function locationChange(event){
     let loc = event.target.value;
-    this.setState ({location:loc});
+    console.log("loc",loc);
+    setLocation(loc);
   }
 
-  render(){
     return(
       <div className = "homePage">
         <AppHeader/>
-        <form onSubmit = {this.locationSubmit}>
-          <input type = "text" className = "cityName" placeholder = "Enter your location.." onChange = {this.locationChange}/>
+        <form onSubmit = {locationSubmit}>
+          <input type = "text" className = "cityName" placeholder = "Enter your location.."
+          onChange = {locationChange}/>
           <input type = "submit" value = "Go"/>
         </form>
       </div>
     )
-  }
 }
 
-function mapStateToProps(state){
-  return {
-    cities : state.getCitiesReducer.cities
-  }
-}
 
-export default withRouter(connect(mapStateToProps)(Location));
+export default Location;

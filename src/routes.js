@@ -21,8 +21,7 @@ export default function Routes() {
               </Route>
               <Route path = '/Restaurants' component = {Restaurants} >
               </Route>
-              <Route path = '/RestaurantDetails'>
-                <RestaurantDetails />
+              <Route path = '/RestaurantDetails' component = {RestaurantDetails}>
               </Route>
             </Switch>
         </Suspense>

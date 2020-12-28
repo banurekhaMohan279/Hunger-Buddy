@@ -1,8 +1,9 @@
 import getCitiesApi from '../entities/getCitiesApi.js';
 
 export default function getCities(location){
+  console.log("location",location);
   return dispatch => {
-    return getCitiesApi(location)
+    return getCitiesApi(location.location)
     .then(response => {
       if(response.error){
         dispatch(getCitiesFailure('Get cities failure'));

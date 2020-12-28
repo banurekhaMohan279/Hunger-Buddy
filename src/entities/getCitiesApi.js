@@ -1,4 +1,5 @@
 export default function getCitiesApi(location){
+  console.log("entities",location)
     return fetch ('https://developers.zomato.com/api/v2.1/locations?q='+location,
                   {
                     method: 'GET',
