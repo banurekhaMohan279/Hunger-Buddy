@@ -1,23 +1,27 @@
 {
   "files": {
     "main.css": "/Hunger-Buddy/static/css/main.2f61a6e4.chunk.css",
-    "main.js": "/Hunger-Buddy/static/js/main.3fc8b658.chunk.js",
-    "main.js.map": "/Hunger-Buddy/static/js/main.3fc8b658.chunk.js.map",
-    "runtime-main.js": "/Hunger-Buddy/static/js/runtime-main.df5d0ea6.js",
-    "runtime-main.js.map": "/Hunger-Buddy/static/js/runtime-main.df5d0ea6.js.map",
-    "static/js/2.66c336ee.chunk.js": "/Hunger-Buddy/static/js/2.66c336ee.chunk.js",
-    "static/js/2.66c336ee.chunk.js.map": "/Hunger-Buddy/static/js/2.66c336ee.chunk.js.map",
-    "static/js/3.17589f65.chunk.js": "/Hunger-Buddy/static/js/3.17589f65.chunk.js",
-    "static/js/3.17589f65.chunk.js.map": "/Hunger-Buddy/static/js/3.17589f65.chunk.js.map",
+    "main.js": "/Hunger-Buddy/static/js/main.b73abf06.chunk.js",
+    "main.js.map": "/Hunger-Buddy/static/js/main.b73abf06.chunk.js.map",
+    "runtime-main.js": "/Hunger-Buddy/static/js/runtime-main.2c4dbe23.js",
+    "runtime-main.js.map": "/Hunger-Buddy/static/js/runtime-main.2c4dbe23.js.map",
+    "static/js/2.51e225c1.chunk.js": "/Hunger-Buddy/static/js/2.51e225c1.chunk.js",
+    "static/js/2.51e225c1.chunk.js.map": "/Hunger-Buddy/static/js/2.51e225c1.chunk.js.map",
+    "static/js/3.75ef7f89.chunk.js": "/Hunger-Buddy/static/js/3.75ef7f89.chunk.js",
+    "static/js/3.75ef7f89.chunk.js.map": "/Hunger-Buddy/static/js/3.75ef7f89.chunk.js.map",
+    "static/js/4.35a7e1a4.chunk.js": "/Hunger-Buddy/static/js/4.35a7e1a4.chunk.js",
+    "static/js/4.35a7e1a4.chunk.js.map": "/Hunger-Buddy/static/js/4.35a7e1a4.chunk.js.map",
+    "static/js/5.5386663b.chunk.js": "/Hunger-Buddy/static/js/5.5386663b.chunk.js",
+    "static/js/5.5386663b.chunk.js.map": "/Hunger-Buddy/static/js/5.5386663b.chunk.js.map",
     "index.html": "/Hunger-Buddy/index.html",
     "static/css/main.2f61a6e4.chunk.css.map": "/Hunger-Buddy/static/css/main.2f61a6e4.chunk.css.map",
-    "static/js/2.66c336ee.chunk.js.LICENSE.txt": "/Hunger-Buddy/static/js/2.66c336ee.chunk.js.LICENSE.txt",
+    "static/js/2.51e225c1.chunk.js.LICENSE.txt": "/Hunger-Buddy/static/js/2.51e225c1.chunk.js.LICENSE.txt",
     "static/media/App.css": "/Hunger-Buddy/static/media/index.e0d858ea.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.df5d0ea6.js",
-    "static/js/2.66c336ee.chunk.js",
+    "static/js/runtime-main.2c4dbe23.js",
+    "static/js/2.51e225c1.chunk.js",
     "static/css/main.2f61a6e4.chunk.css",
-    "static/js/main.3fc8b658.chunk.js"
+    "static/js/main.b73abf06.chunk.js"
   ]
 }
