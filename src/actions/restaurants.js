@@ -1,8 +1,8 @@
 import restaurantsApi from '../entities/restaurantsApi.js';
 
-export function getAllRestaurants() {
+export function getAllRestaurants(city) {
   return dispatch => { //
-    return restaurantsApi.getAllRestaurants()
+    return restaurantsApi.getAllRestaurants(city)
     .then(response => {
       if(response.error) {
         dispatch(getRestaurantsFailure('Get Restaurants Failure'));
