@@ -17,7 +17,6 @@ function Location() {
 
   function locationChange(event){
     let loc = event.target.value;
-    console.log("loc",loc);
     setLocation(loc);
   }
 

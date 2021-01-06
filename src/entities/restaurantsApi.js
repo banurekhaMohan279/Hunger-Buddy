@@ -1,7 +1,6 @@
 class restaurantsApi {
 
    getAllRestaurants(city){
-     console.log("city...",city);
     return fetch('https://developers.zomato.com/api/v2.1/search?entity_id='+city+'&entity_type=city&category=6',
                 {
                   method: 'GET',

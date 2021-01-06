@@ -13,7 +13,6 @@ class Restaurants extends React.Component{
 
   componentDidMount(){
     let city = this.props.cities["location_suggestions"][0]["entity_id"];
-    console.log("city",city);
     this.props.dispatch(getAllRestaurants(city));
   }
 
