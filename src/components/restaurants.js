@@ -6,6 +6,18 @@ import AppHeader from './AppHeader';
 import {useHistory} from 'react-router-dom';
 
 function Restaurants() {
+
+  // styling post container
+  const divStyle = {
+      height: '250px'
+  };
+
+  // styling container wrapper
+  const containerStyle = {
+      maxWidth: '1280px',
+      margin: '0 auto'
+  }
+
   let dispatch = useDispatch();
   let history = useHistory();
   let restaurants = useSelector(state => state.restaurantsReducer.restaurants && state.restaurantsReducer.restaurants.restaurants);
@@ -25,12 +37,12 @@ function Restaurants() {
   return(
       <div className = "retaurantsPage">
           <AppHeader/>
-          <div className = "restaurantList">
+          <div className = "restaurantList" style ={containerStyle}>
             {restaurants &&
               restaurants.map ( (item,index) => {
                 return  (
-                  <div className = "restaurant" key = {"restaurant"+index}
-                  onClick = {(e) => this.getRestaurantDetails(item.restaurant.R.res_id)}>
+                  <div className = "restaurant" key = {"restaurant"+index} style = {divStyle}
+                  onClick = {(e) => getRestaurantDetails(item.restaurant.R.res_id)}>
                     <img src = {item.restaurant.thumb} alt = {item.restaurant.name} className = "restaurantThumbNail" />
                     <h4 className = "restaurantName"> {item.restaurant.name} </h4>
                     <span>☆{item.restaurant.user_rating.aggregate_rating}</span>
