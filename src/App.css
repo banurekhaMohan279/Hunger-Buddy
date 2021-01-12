@@ -92,6 +92,8 @@ html, body, #root, .App{
 .login input{
   margin:2%;
   padding:2%;
+  border:1px solid #fbf8f8;
+  box-shadow:0 0 4px rgba(0,0,0,0.5);
 }
 
 .login input[type="text"], .login input[type="password"]{
