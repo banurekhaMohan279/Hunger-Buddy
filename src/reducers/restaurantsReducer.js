@@ -1,5 +1,5 @@
 const initialState = {
-  restaurants:null,
+  restaurants:[],
   error:null
 }
 
@@ -8,7 +8,7 @@ export default function restaurantsReducer ( state = initialState, action ){
     case 'GET_RESTAURANTS_FAILURE':
       return  Object.assign ({}, state, {restaurants :  null, error: action.msg}); // assign to update state
     case 'GET_RESTAURANTS_SUCCESS':
-      return Object.assign ({}, state, {restaurants : action.response, error: null });
+      return Object.assign ({}, state, {restaurants : state.restaurants.concat(action.response.restaurants), error: null });
     default:
       return state;
   }

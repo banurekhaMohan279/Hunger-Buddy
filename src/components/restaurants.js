@@ -6,7 +6,25 @@ import AppHeader from './AppHeader';
 import {useHistory} from 'react-router-dom';
 
 function Restaurants() {
+  let dispatch = useDispatch();
+  let history = useHistory();
+  const [page, setPage] = useState(0);
+  //  const [restaurants, setRestaurants] = useState([]);
+  let restaurants = useSelector(state => state.restaurantsReducer.restaurants);
+  let city = useSelector(state => state.getCitiesReducer.cities["location_suggestions"][0]["entity_id"]);
+  console.log("restaurants",restaurants);
 
+  useEffect(() =>{
+    dispatch(getAllRestaurants(city,page));
+  },[]);
+
+  function getRestaurantDetails(res_id){
+      dispatch(getRestaurantDetails(res_id)).then (() => {
+        history.push('/RestaurantDetails');
+      });
+  }
+
+  /**** Infinite Scroll ******/
   // styling post container
   const divStyle = {
       height: '250px'
@@ -17,63 +35,36 @@ function Restaurants() {
       maxWidth: '1280px',
       margin: '0 auto'
   }
+  // add loader refrence
+  const loader = useRef(null);
 
-  let dispatch = useDispatch();
-  let history = useHistory();
-  let restaurants = useSelector(state => state.restaurantsReducer.restaurants && state.restaurantsReducer.restaurants.restaurants);
-  let city = useSelector(state => state.getCitiesReducer.cities["location_suggestions"][0]["entity_id"]);
-  console.log("restaurants",restaurants);
+  useEffect(() => {
+       var options = {
+          root: null,
+          rootMargin: "20px",
+          threshold: 1.0
+       };
+      // initialize IntersectionObserver and attaching to Load More div
+       const observer = new IntersectionObserver(handleObserver, options);
+       if (loader.current) {
+          observer.observe(loader.current)
+       }
+  }, []);
 
-  useEffect(() =>{
-    dispatch(getAllRestaurants(city));
-  },[]);
+  // Similar to componentDidUpdate - updates whenever page state is changed / dispatch can also be added inside setTimeout
+  useEffect(() => {
+      console.log("dispatched?")
+      dispatch(getAllRestaurants(city,page));
+  }, [page]);
 
-  function getRestaurantDetails(res_id){
-      dispatch(getRestaurantDetails(res_id)).then (() => {
-        history.push('/RestaurantDetails');
-      });
+  // here we handle what happens when user scrolls to Load More div
+ // in this case we just update page variable
+  const handleObserver = (entities) => {
+      const target = entities[0]; // target is the loading div 
+      if (target.isIntersecting) {
+          setTimeout (() => setPage((page) => page + 1),2000);
+      }
   }
-
-  const [postList, setPostList] = useState({
-        list: [1,2,3,4]
-    });
-    // tracking on which page we currently are
-    const [page, setPage] = useState(1);
-    // add loader refrence
-    const loader = useRef(null);
-
-    useEffect(() => {
-         var options = {
-            root: null,
-            rootMargin: "20px",
-            threshold: 1.0
-         };
-        // initialize IntersectionObserver
-        // and attaching to Load More div
-         const observer = new IntersectionObserver(handleObserver, options);
-         if (loader.current) {
-            observer.observe(loader.current)
-         }
-
-    }, []);
-
-
-    useEffect(() => {
-        // here we simulate adding new posts to List
-        const newList = postList.list.concat([1,1,1,1]);
-        setPostList({
-            list: newList
-        })
-    }, [page])
-
-    // here we handle what happens when user scrolls to Load More div
-   // in this case we just update page variable
-    const handleObserver = (entities) => {
-        const target = entities[0];
-        if (target.isIntersecting) {
-            setTimeout (() => setPage((page) => page + 1),2000);
-        }
-    }
 
   return(
       <div className = "retaurantsPage">
