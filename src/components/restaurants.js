@@ -53,16 +53,15 @@ function Restaurants() {
 
   // Similar to componentDidUpdate - updates whenever page state is changed / dispatch can also be added inside setTimeout
   useEffect(() => {
-      console.log("dispatched?")
       dispatch(getAllRestaurants(city,page));
   }, [page]);
 
-  // here we handle what happens when user scrolls to Load More div
- // in this case we just update page variable
+  // here we handle what happens when user scrolls to Load More div - in this case we just update page variable
   const handleObserver = (entities) => {
-      const target = entities[0]; // target is the loading div 
+      const target = entities[0]; // target is the loading div
       if (target.isIntersecting) {
-          setTimeout (() => setPage((page) => page + 1),2000);
+          //setTimeout (() => setPage((page) => page + 1),2000);
+          setPage((page) => page + 1);
       }
   }
 
