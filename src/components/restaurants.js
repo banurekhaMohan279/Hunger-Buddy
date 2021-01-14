@@ -12,7 +12,6 @@ function Restaurants() {
   //  const [restaurants, setRestaurants] = useState([]);
   let restaurants = useSelector(state => state.restaurantsReducer.restaurants);
   let city = useSelector(state => state.getCitiesReducer.cities["location_suggestions"][0]["entity_id"]);
-  console.log("restaurants",restaurants);
 
   useEffect(() =>{
     dispatch(getAllRestaurants(city,page));
