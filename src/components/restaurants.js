@@ -82,7 +82,7 @@ function Restaurants() {
             }
           </div>
           <div className="loading" ref={loader}>
-                    <h2>Load More</h2>
+                    <h2>Loading...</h2>
           </div>
       </div>
     )
