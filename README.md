@@ -1,4 +1,4 @@
-# React Food Delivery App - Hunger Buddy
+# React Restaurants App - Hunger Buddy
 
 ### Built With API from:
 
