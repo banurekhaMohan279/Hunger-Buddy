@@ -8,6 +8,7 @@ import rootReducer from './reducers/rootReducer';
 
 import './index.css';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import reportWebVitals from './reportWebVitals';
 

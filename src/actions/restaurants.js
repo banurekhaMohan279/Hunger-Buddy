@@ -7,7 +7,7 @@ export function getAllRestaurants(city,page,isInit) {
       if(response.error) {
         dispatch(getRestaurantsFailure('Get Restaurants Failure'));
       }
-      else if(isInit == 'initLoad'){
+      else if(isInit === 'initLoad'){
         dispatch(getInitRestaurantsSuccess(response));
         console.log("init restaurants");
       }

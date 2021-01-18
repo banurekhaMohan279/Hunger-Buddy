@@ -38,4 +38,6 @@ Notes-Revisit
   https://dev.to/yuribenjamin/how-to-deploy-react-app-in-github-pages-2a1f
 8. concat/ append to previous state - restaurantsReducer
 9. Modify state of different reducer - getCitiesReducer/ restaurantsReducer
+  - overwrite on componentDidmount and concat on componentDidUpdate
+  - else restaurant overwrite will happen only onlocation dispatch not on forward/back history keys
 */

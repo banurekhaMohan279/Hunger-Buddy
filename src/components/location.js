@@ -2,7 +2,8 @@
 import React, {useState} from 'react';
 import getCities from '../actions/cities';
 import AppHeader from './AppHeader';
-import {connect, useDispatch} from 'react-redux';
+import Button from 'react-bootstrap/Button';
+import { useDispatch} from 'react-redux';
 import {useHistory} from 'react-router-dom';
 
 function Location() {
@@ -26,7 +27,7 @@ function Location() {
         <form onSubmit = {locationSubmit}>
           <input type = "text" className = "cityName" placeholder = "Enter your location.."
           onChange = {locationChange}/>
-          <input type = "submit" value = "Go"/>
+          <Button variant="success">Go</Button>
         </form>
       </div>
     )

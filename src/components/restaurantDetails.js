@@ -12,7 +12,7 @@ class RestaurantDetails extends React.Component{
         <AppHeader/>
 
         <section className = "img-section">
-          <img src = {restaurantDetails.featured_image}/>
+          <img src = {restaurantDetails.featured_image} alt = {restaurantDetails.name}/>
         </section>
 
         <section className = "details-section">

@@ -1,5 +1,5 @@
 import React, {useEffect, useState, useRef} from 'react';
-import {connect, useDispatch, useSelector} from 'react-redux';
+import { useDispatch, useSelector} from 'react-redux';
 import {getAllRestaurants} from '../actions/restaurants';
 import {getRestaurantDetails} from '../actions/restaurantDetails';
 import AppHeader from './AppHeader';
@@ -14,8 +14,20 @@ function Restaurants() {
   let city = useSelector(state => state.getCitiesReducer.cities["location_suggestions"][0]["entity_id"]);
 
   useEffect(() =>{
-    dispatch(getAllRestaurants(city,page,'initLoad'));
-  },[]);
+    dispatch(getAllRestaurants(city,page,'initLoad')).then(()=>{ // to update page number after first load, else page number updates of blank loading div
+      var options = {
+         root: null,
+         rootMargin: "20px",
+         threshold: 1.0
+      };
+     // initialize IntersectionObserver and attaching to Load More div
+      const observer = new IntersectionObserver(handleObserver, options);
+      console.log("loader",loader,loader.current);
+      if (loader.current) {
+         observer.observe(loader.current)
+      }
+    }); // overwrite restaurants state on load
+  });
 
   function getRestaurantDetails(res_id){
       dispatch(getRestaurantDetails(res_id)).then (() => {
@@ -37,7 +49,7 @@ function Restaurants() {
   // add loader refrence
   const loader = useRef(null);
 
-  useEffect(() => {
+  /*useEffect(() => {
        var options = {
           root: null,
           rootMargin: "20px",
@@ -45,14 +57,16 @@ function Restaurants() {
        };
       // initialize IntersectionObserver and attaching to Load More div
        const observer = new IntersectionObserver(handleObserver, options);
+       console.log("loader",loader,loader.current);
        if (loader.current) {
           observer.observe(loader.current)
        }
-  }, []);
+  }, []);*/
 
   // Similar to componentDidUpdate - updates whenever page state is changed / dispatch can also be added inside setTimeout
   useEffect(() => {
-      dispatch(getAllRestaurants(city,page,'notInitLoad'));
+      console.log("componentDidUpdate",page);
+      dispatch(getAllRestaurants(city,page,'notInitLoad')); // concat restaurants state on subsequent loads
   }, [page]);
 
   // here we handle what happens when user scrolls to Load More div - in this case we just update page variable
