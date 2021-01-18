@@ -1,6 +1,6 @@
 class restaurantsApi {
 
-   getAllRestaurants(city,page){
+   getAllRestaurants(city,page,isInit){
     const start = page * 20;
     return fetch('https://developers.zomato.com/api/v2.1/search?entity_id='+city+'&entity_type=city&start='+start+'&count=20&category=6',
                 {

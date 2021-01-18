@@ -11,7 +11,6 @@ Changes in pages for
 
 // TODO:
 sort based on rating/cuisine
-on refresh needs another retaurantdetails in componentdidMount
 pagination
 lazy loading
 responsiveness
@@ -37,4 +36,6 @@ Notes-Revisit
 6. Revisit - event handling with params
 7. Create-react-app on Github pages
   https://dev.to/yuribenjamin/how-to-deploy-react-app-in-github-pages-2a1f
+8. concat/ append to previous state - restaurantsReducer
+9. Modify state of different reducer - getCitiesReducer/ restaurantsReducer
 */

@@ -14,7 +14,7 @@ function Restaurants() {
   let city = useSelector(state => state.getCitiesReducer.cities["location_suggestions"][0]["entity_id"]);
 
   useEffect(() =>{
-    dispatch(getAllRestaurants(city,page));
+    dispatch(getAllRestaurants(city,page,'initLoad'));
   },[]);
 
   function getRestaurantDetails(res_id){
@@ -52,7 +52,7 @@ function Restaurants() {
 
   // Similar to componentDidUpdate - updates whenever page state is changed / dispatch can also be added inside setTimeout
   useEffect(() => {
-      dispatch(getAllRestaurants(city,page));
+      dispatch(getAllRestaurants(city,page,'notInitLoad'));
   }, [page]);
 
   // here we handle what happens when user scrolls to Load More div - in this case we just update page variable
