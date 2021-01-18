@@ -27,7 +27,7 @@ function Location() {
         <form onSubmit = {locationSubmit}>
           <input type = "text" className = "cityName" placeholder = "Enter your location.."
           onChange = {locationChange}/>
-          <Button variant="success">Go</Button>
+          <Button variant="success" type = "submit">Go</Button>
         </form>
       </div>
     )

@@ -9,12 +9,12 @@ function Restaurants() {
   let dispatch = useDispatch();
   let history = useHistory();
   const [page, setPage] = useState(0);
-  //  const [restaurants, setRestaurants] = useState([]);
   let restaurants = useSelector(state => state.restaurantsReducer.restaurants);
   let city = useSelector(state => state.getCitiesReducer.cities["location_suggestions"][0]["entity_id"]);
 
   useEffect(() =>{
-    dispatch(getAllRestaurants(city,page,'initLoad')).then(()=>{ // to update page number after first load, else page number updates of blank loading div
+    dispatch(getAllRestaurants(city,page,'initLoad')).then(()=>{ // update page number after first load, else page no. updates before mount on seeing loading div
+      console.log("after mount");
       var options = {
          root: null,
          rootMargin: "20px",
@@ -26,8 +26,8 @@ function Restaurants() {
       if (loader.current) {
          observer.observe(loader.current)
       }
-    }); // overwrite restaurants state on load
-  });
+    })// overwrite restaurants state on load
+  },[]);
 
   function getRestaurantDetails(res_id){
       dispatch(getRestaurantDetails(res_id)).then (() => {
@@ -48,20 +48,6 @@ function Restaurants() {
   }
   // add loader refrence
   const loader = useRef(null);
-
-  /*useEffect(() => {
-       var options = {
-          root: null,
-          rootMargin: "20px",
-          threshold: 1.0
-       };
-      // initialize IntersectionObserver and attaching to Load More div
-       const observer = new IntersectionObserver(handleObserver, options);
-       console.log("loader",loader,loader.current);
-       if (loader.current) {
-          observer.observe(loader.current)
-       }
-  }, []);*/
 
   // Similar to componentDidUpdate - updates whenever page state is changed / dispatch can also be added inside setTimeout
   useEffect(() => {
