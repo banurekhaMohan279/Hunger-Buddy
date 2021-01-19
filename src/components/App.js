@@ -15,10 +15,9 @@ function App() {
   }
 
   return (
-      <Container fluid className = "set-height">
-        <Row className = "justify-content-md-center align-items-center set-height">
-          <Row className="justify-content-md-center login-form">
-            <Col xl>
+      <Container fluid="sm" className = "set-height">
+        <Row  className = "justify-content-center align-items-center set-height">
+            <Col className = "login-form" >
               <header>Food Delivery App Login</header>
               <Form onSubmit = {goToHomePage}>
                 <Form.Group controlId="formBasicEmail">
@@ -37,7 +36,6 @@ function App() {
                 </Button>
               </Form>
             </Col>
-          </Row>
         </Row>
       </Container>
   );
