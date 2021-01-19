@@ -61,13 +61,21 @@ html, body, #root, .App{
 
 /*------------------Login Page styles---------------------*/
 
-.loginContainer{
-  display: flex;                                          /*Only impacts direct children*/
+.set-height{
+  height: 100%;
+}
+
+.login-form{
+  -webkit-box-shadow: 5px 5px 15px 5px #e0e0e0;
+  box-shadow: 5px 5px 15px 5px #e0e0e0;
+}
+/*.loginContainer{
+  display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
   background:#fafafa;
-  font-family:sans-serif; /*Check here*/
+  font-family:sans-serif;
 }
 
 .login{
@@ -85,7 +93,7 @@ html, body, #root, .App{
   font-weight:bold;
 }
 
-.login form{
+/*.login form{
   height:70%;
 }
 
@@ -108,7 +116,7 @@ html, body, #root, .App{
   background: #009688;
   color: #ffffff;
   border-radius: 10px;
-  /* font-weight: normal; */
+  font-weight: normal;
   text-decoration: none;
   text-transform: none;
   background-image: linear-gradient(to right, rgb(7 97 88) 0%, rgb(23 144 133) 50%, rgb(4 132 120) 100%);
@@ -124,7 +132,7 @@ background: #009688;
 
 .login input[type="submit"]:active {
 background: #009688;
-}
+}*/
 
 @media only screen and (max-width: 400px) {
   .login{
