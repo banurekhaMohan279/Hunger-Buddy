@@ -146,12 +146,12 @@ background: #009688;
   background : url('./assets/index.jpg') no-repeat;  /*background short-hand*/
 }
 
-.homePage form{
+/*.homePage form{
   display:flex;
   align-items:center;
   justify-content:center;
   height:100%;
-  background : url('./assets/index.jpg') no-repeat;  /*background short-hand*/
+  background : url('./assets/index.jpg') no-repeat;
   background-size : cover;
 }
 
@@ -161,10 +161,13 @@ background: #009688;
 .homePage input[type="submit"]{
   padding: 0.5% 0 0.5% 0;
   cursor: pointer;
-}
+}*/
 
 /*Restaurant page styles*/
-.restaurantList {
+.restaurantsPage .card{
+  cursor: pointer;
+}
+/*.restaurantList {
   display:flex;
   flex-wrap:wrap;
   align-items: center;
@@ -190,7 +193,7 @@ background: #009688;
 .restaurantList span{
   font-size: 0.8em;
   color: #403e3e;
-}
+}*/
 
 /*Restaurant details page styles*/
 .RestaurantDetails{

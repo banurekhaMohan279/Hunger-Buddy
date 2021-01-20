@@ -68,7 +68,7 @@ function Restaurants() {
   }
 
   return(
-      <div className = "set-height">
+      <div className = "set-height restaurantsPage">
           <AppHeader/>
           <Container fluid style ={containerStyle}>
             <CardDeck>
