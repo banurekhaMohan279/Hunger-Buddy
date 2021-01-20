@@ -3,6 +3,11 @@ import { useDispatch, useSelector} from 'react-redux';
 import {getAllRestaurants} from '../actions/restaurants';
 import {getRestaurantDetails} from '../actions/restaurantDetails';
 import AppHeader from './AppHeader';
+
+import Container from 'react-bootstrap/Container';
+import Card from 'react-bootstrap/Card';
+import CardDeck from 'react-bootstrap/CardDeck';
+
 import {useHistory} from 'react-router-dom';
 
 function Restaurants() {
@@ -20,9 +25,7 @@ function Restaurants() {
          rootMargin: "20px",
          threshold: 1.0
       };
-     // initialize IntersectionObserver and attaching to Load More div
-      const observer = new IntersectionObserver(handleObserver, options);
-      console.log("loader",loader,loader.current);
+      const observer = new IntersectionObserver(handleObserver, options);  // initialize IntersectionObserver and attaching to Load More div
       if (loader.current) {
          observer.observe(loader.current)
       }
@@ -38,7 +41,7 @@ function Restaurants() {
   /**** Infinite Scroll ******/
   // styling post container
   const divStyle = {
-      height: '250px'
+      height: '300px'
   };
 
   // styling container wrapper
@@ -65,22 +68,26 @@ function Restaurants() {
   }
 
   return(
-      <div className = "retaurantsPage">
+      <div className = "set-height">
           <AppHeader/>
-          <div className = "restaurantList" style ={containerStyle}>
+          <Container fluid style ={containerStyle}>
+            <CardDeck>
             {restaurants &&
               restaurants.map ( (item,index) => {
                 return  (
-                  <div className = "restaurant" key = {"restaurant"+index} style = {divStyle}
-                  onClick = {(e) => getRestaurantDetails(item.restaurant.R.res_id)}>
-                    <img src = {item.restaurant.thumb} alt = {item.restaurant.name} className = "restaurantThumbNail" />
-                    <h4 className = "restaurantName"> {item.restaurant.name} </h4>
-                    <span>☆{item.restaurant.user_rating.aggregate_rating}</span>
-                  </div>
+                  <Card key={"restaurant"+index} style={{ 'min-width': '18rem' }}
+                   onClick = {(e) => getRestaurantDetails(item.restaurant.R.res_id)}>
+                      <Card.Img variant="top" src = {item.restaurant.thumb} alt = {item.restaurant.name}/>
+                      <Card.Body>
+                        <Card.Title>{item.restaurant.name}</Card.Title>
+                        <Card.Text>☆{item.restaurant.user_rating.aggregate_rating}</Card.Text>
+                      </Card.Body>
+                    </Card>
                 );
               })
             }
-          </div>
+            </CardDeck>
+          </Container>
           <div className="loading" ref={loader}>
                     <h2>Loading...</h2>
           </div>
