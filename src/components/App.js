@@ -15,10 +15,12 @@ function App() {
   }
 
   return (
-      <Container fluid="sm" className = "set-height">
-        <Row  className = "justify-content-center align-items-center set-height">
-            <Col className = "login-form" >
-              <header>Food Delivery App Login</header>
+      <Container className = "set-height">
+        <Row className = "justify-content-center align-items-center set-height">
+            <Col xs = {7} className = "login-form" >
+              <div className = "text-center">
+                <h3>Hunger Buddy - Login</h3>
+              </div>
               <Form onSubmit = {goToHomePage}>
                 <Form.Group controlId="formBasicEmail">
                   <Form.Label>Email address</Form.Label>
@@ -31,9 +33,11 @@ function App() {
                   <Form.Label>Password</Form.Label>
                   <Form.Control type="password" placeholder="Password" />
                 </Form.Group>
-                <Button variant="primary" type="submit">
-                  Submit
-                </Button>
+                <div className = "text-center">
+                  <Button variant="outline-success" size="lg" type="submit">
+                    Submit
+                  </Button>
+                </div>
               </Form>
             </Col>
         </Row>
