@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Hunger-Buddy/static/css/main.b52a2676.chunk.css",
-    "main.js": "/Hunger-Buddy/static/js/main.760b5687.chunk.js",
-    "main.js.map": "/Hunger-Buddy/static/js/main.760b5687.chunk.js.map",
+    "main.js": "/Hunger-Buddy/static/js/main.a2aa7345.chunk.js",
+    "main.js.map": "/Hunger-Buddy/static/js/main.a2aa7345.chunk.js.map",
     "runtime-main.js": "/Hunger-Buddy/static/js/runtime-main.48affbba.js",
     "runtime-main.js.map": "/Hunger-Buddy/static/js/runtime-main.48affbba.js.map",
     "static/css/2.20aa2d7b.chunk.css": "/Hunger-Buddy/static/css/2.20aa2d7b.chunk.css",
@@ -25,6 +25,6 @@
     "static/css/2.20aa2d7b.chunk.css",
     "static/js/2.cbe56205.chunk.js",
     "static/css/main.b52a2676.chunk.css",
-    "static/js/main.760b5687.chunk.js"
+    "static/js/main.a2aa7345.chunk.js"
   ]
 }
