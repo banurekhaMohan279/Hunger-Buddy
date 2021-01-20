@@ -2,7 +2,12 @@
 import React, {useState} from 'react';
 import getCities from '../actions/cities';
 import AppHeader from './AppHeader';
+import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
 import { useDispatch} from 'react-redux';
 import {useHistory} from 'react-router-dom';
 
@@ -22,13 +27,24 @@ function Location() {
   }
 
     return(
-      <div className = "homePage">
+      <div className = "locationPage set-height">
         <AppHeader/>
-        <form onSubmit = {locationSubmit}>
-          <input type = "text" className = "cityName" placeholder = "Enter your location.."
-          onChange = {locationChange}/>
-          <Button variant="success" type = "submit">Go</Button>
-        </form>
+        <Container className = "set-height">
+          <Row className = "justify-content-center align-items-center set-height">
+                <Form onSubmit = {locationSubmit}>
+                  <Row>
+                    <Col>
+                      <Form.Group controlId="formLocation">
+                        <Form.Control type="text" placeholder="Enter Location..." />
+                      </Form.Group>
+                    </Col>
+                    <Col>
+                      <Button variant="success" type = "submit">Go</Button>
+                    </Col>
+                  </Row>
+                </Form>
+            </Row>
+          </Container>
       </div>
     )
 }

@@ -142,8 +142,8 @@ background: #009688;
 
 
 /*-----------------------Location page styles-------------------------*/
-.homePage{
-  height:100%;
+.locationPage{
+  background : url('./assets/index.jpg') no-repeat;  /*background short-hand*/
 }
 
 .homePage form{
