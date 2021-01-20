@@ -29,17 +29,17 @@ function Location() {
     return(
       <div className = "locationPage set-height">
         <AppHeader/>
-        <Container className = "set-height">
+        <Container fluid className = "set-height">
           <Row className = "justify-content-center align-items-center set-height">
                 <Form onSubmit = {locationSubmit}>
                   <Row>
-                    <Col>
+                    <Col xs = {8}>
                       <Form.Group controlId="formLocation">
-                        <Form.Control type="text" placeholder="Enter Location..." />
+                        <Form.Control size = "lg" type="text" placeholder="Enter Location.." />
                       </Form.Group>
                     </Col>
-                    <Col>
-                      <Button variant="success" type = "submit">Go</Button>
+                    <Col xs = {2}>
+                      <Button variant="success" size = "lg" type = "submit">Go</Button>
                     </Col>
                   </Row>
                 </Form>
