@@ -125,19 +125,6 @@ background: #009688;
 background: #009688;
 }*/
 
-@media only screen and (max-width: 400px) {
-  .login{
-    width:70%;
-    height:40%;
-  }
-}
-
-@media only screen and (min-width: 401px) and (max-width: 960px) {
-  .login{
-    width:50%;
-    height:30%;
-  }
-}
 
 
 
@@ -196,7 +183,7 @@ background: #009688;
 }*/
 
 /*Restaurant details page styles*/
-.RestaurantDetails{
+/*.RestaurantDetails{
   display:flex;
   justify-content: center;
   flex-wrap:wrap;
@@ -217,22 +204,26 @@ background: #009688;
 
 .RestaurantDetails .img-section img:hover{
   transform: scale(1.09);
+}*/
+.RestaurantDetailsPage .container{
+  margin-top: 2%;
 }
 
-.RestaurantDetails .details-section{
-  width:30%;
-  padding: 5% 0 2% 2%;
+.rest-img{
+  max-width: 80%;
+}
+
+.RestaurantDetailsPage .details-section{
   background:#efeeee;
-  margin-top:2%;
 }
 
-.RestaurantDetails .details-section > span {
+.RestaurantDetailsPage .details-section > span {
   font-size: 0.8em;
   display:block;
   margin:1.5%;
 }
 
-.RestaurantDetails .details-section .rest-type{
+.RestaurantDetailsPage .details-section .rest-type{
   background:grey;
   padding:1%;
   background: #d6d2cc;
