@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/Hunger-Buddy/static/css/main.96badcdd.chunk.css",
-    "main.js": "/Hunger-Buddy/static/js/main.be3e3442.chunk.js",
-    "main.js.map": "/Hunger-Buddy/static/js/main.be3e3442.chunk.js.map",
+    "main.css": "/Hunger-Buddy/static/css/main.e819ecc6.chunk.css",
+    "main.js": "/Hunger-Buddy/static/js/main.3f0ba22b.chunk.js",
+    "main.js.map": "/Hunger-Buddy/static/js/main.3f0ba22b.chunk.js.map",
     "runtime-main.js": "/Hunger-Buddy/static/js/runtime-main.2227f845.js",
     "runtime-main.js.map": "/Hunger-Buddy/static/js/runtime-main.2227f845.js.map",
     "static/css/2.20aa2d7b.chunk.css": "/Hunger-Buddy/static/css/2.20aa2d7b.chunk.css",
@@ -16,7 +16,7 @@
     "static/js/5.44ca20ed.chunk.js.map": "/Hunger-Buddy/static/js/5.44ca20ed.chunk.js.map",
     "index.html": "/Hunger-Buddy/index.html",
     "static/css/2.20aa2d7b.chunk.css.map": "/Hunger-Buddy/static/css/2.20aa2d7b.chunk.css.map",
-    "static/css/main.96badcdd.chunk.css.map": "/Hunger-Buddy/static/css/main.96badcdd.chunk.css.map",
+    "static/css/main.e819ecc6.chunk.css.map": "/Hunger-Buddy/static/css/main.e819ecc6.chunk.css.map",
     "static/js/2.a6714964.chunk.js.LICENSE.txt": "/Hunger-Buddy/static/js/2.a6714964.chunk.js.LICENSE.txt",
     "static/media/App.css": "/Hunger-Buddy/static/media/index.e0d858ea.jpg"
   },
@@ -24,7 +24,7 @@
     "static/js/runtime-main.2227f845.js",
     "static/css/2.20aa2d7b.chunk.css",
     "static/js/2.a6714964.chunk.js",
-    "static/css/main.96badcdd.chunk.css",
-    "static/js/main.be3e3442.chunk.js"
+    "static/css/main.e819ecc6.chunk.css",
+    "static/js/main.3f0ba22b.chunk.js"
   ]
 }
