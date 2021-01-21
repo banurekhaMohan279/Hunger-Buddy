@@ -17,7 +17,7 @@ function App() {
   return (
       <Container className = "set-height">
         <Row className = "justify-content-center align-items-center set-height">
-            <Col xs = {7} className = "login-form" >
+            <Col xs = {6} className = "login-form" >
               <div className = "text-center">
                 <h3>Hunger Buddy - Login</h3>
               </div>

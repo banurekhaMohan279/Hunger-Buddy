@@ -19,7 +19,6 @@ function Restaurants() {
 
   useEffect(() =>{
     dispatch(getAllRestaurants(city,page,'initLoad')).then(()=>{ // update page number after first load, else page no. updates before mount on seeing loading div
-      console.log("after mount");
       var options = {
          root: null,
          rootMargin: "20px",
@@ -32,18 +31,7 @@ function Restaurants() {
     })// overwrite restaurants state on load
   },[]);
 
-  function getRestaurantDetails(res_id){
-      dispatch(getRestaurantDetails(res_id)).then (() => {
-        history.push('/RestaurantDetails');
-      });
-  }
-
   /**** Infinite Scroll ******/
-  // styling post container
-  const divStyle = {
-      height: '300px'
-  };
-
   // styling container wrapper
   const containerStyle = {
       maxWidth: '1280px',
@@ -62,9 +50,14 @@ function Restaurants() {
   const handleObserver = (entities) => {
       const target = entities[0]; // target is the loading div
       if (target.isIntersecting) {
-          //setTimeout (() => setPage((page) => page + 1),2000);
           setPage((page) => page + 1);
       }
+  }
+
+  function getRestaurantDetail(res_id){
+      dispatch(getRestaurantDetails(res_id)).then (() => {
+        history.push('/RestaurantDetails');
+      });
   }
 
   return(
@@ -75,8 +68,8 @@ function Restaurants() {
             {restaurants &&
               restaurants.map ( (item,index) => {
                 return  (
-                  <Card key={"restaurant"+index} style={{ 'min-width': '18rem' }}
-                   onClick = {(e) => getRestaurantDetails(item.restaurant.R.res_id)}>
+                  <Card style={{ minWidth: '18rem' }} key={"restaurant"+index}
+                   onClick = {(e) => getRestaurantDetail(item.restaurant.R.res_id)}>
                       <Card.Img variant="top" src = {item.restaurant.thumb} alt = {item.restaurant.name}/>
                       <Card.Body>
                         <Card.Title>{item.restaurant.name}</Card.Title>
