@@ -19,7 +19,7 @@ function App() {
         <Row className = "justify-content-center align-items-center set-height">
             <Col xs = {7} className = "login-form" >
               <div className = "text-center">
-                <h4>Hunger Buddy - Login</h4>
+                <h4>Hunger Buddy</h4>
               </div>
               <Form onSubmit = {goToHomePage}>
                 <Form.Group controlId="formBasicEmail">
