@@ -8,7 +8,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-import { useDispatch} from 'react-redux';
+import {useDispatch} from 'react-redux';
 import {useHistory} from 'react-router-dom';
 
 function Location() {
@@ -18,7 +18,9 @@ function Location() {
 
   function locationSubmit(event) {
     event.preventDefault();
-    dispatch(getCities({location})).then( () => {history.push('/Restaurants')} );
+    dispatch(getCities({location})).then( () => {
+      history.push('/Restaurants')
+    } );
   }
 
   function locationChange(event){

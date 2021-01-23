@@ -15,10 +15,10 @@ function Restaurants() {
   let history = useHistory();
   const [page, setPage] = useState(0);
   let restaurants = useSelector(state => state.restaurantsReducer.restaurants);
-  let city = useSelector(state => state.getCitiesReducer.cities["location_suggestions"][0]["entity_id"]);
+  let cityId = JSON.parse(localStorage.getItem('locationId'));
 
   useEffect(() =>{
-    dispatch(getAllRestaurants(city,page,'initLoad')).then(()=>{ // update page number after first load, else page no. updates before mount on seeing loading div
+    dispatch(getAllRestaurants(cityId,page,'initLoad')).then(()=>{ // update page number after first load, else page no. updates before mount on seeing loading div
       var options = {
          root: null,
          rootMargin: "20px",
@@ -43,7 +43,7 @@ function Restaurants() {
   // Similar to componentDidUpdate - updates whenever page state is changed / dispatch can also be added inside setTimeout
   useEffect(() => {
       console.log("componentDidUpdate",page);
-      dispatch(getAllRestaurants(city,page,'notInitLoad')); // concat restaurants state on subsequent loads
+      dispatch(getAllRestaurants(cityId,page,'notInitLoad')); // concat restaurants state on subsequent loads
   }, [page]);
 
   // here we handle what happens when user scrolls to Load More div - in this case we just update page variable
