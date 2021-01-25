@@ -2,7 +2,7 @@
 
 ### Built With API from:
 
-[Zomato Developers API](https://developers.zomato.com/api)
+[Zomato Dev API](https://developers.zomato.com/api)
 
 ### [Demo Here](https://banurekhamohan279.github.io/Food-Delivery-App/)
 
