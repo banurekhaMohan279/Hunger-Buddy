@@ -11,9 +11,7 @@ Changes in pages for
 
 // TODO:
 sort based on rating/cuisine
-pagination
-lazy loading
-responsiveness
+
 
 Notes-Revisit
 1. Centering nested children with flexbox
