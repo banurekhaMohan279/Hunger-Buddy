@@ -1,8 +1,6 @@
 # React Restaurants App - Hunger Buddy
 
-### Built With API from:
-
-[Zomato Dev API](https://developers.zomato.com/api)
+### Built With API from [Zomato Dev API](https://developers.zomato.com/api)
 
 ### [Demo Here](https://banurekhamohan279.github.io/Food-Delivery-App/)
 
