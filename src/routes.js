@@ -11,7 +11,7 @@ const RestaurantDetails = lazy(() => import ('./components/restaurantDetails.js'
 export default function Routes() {
   return(
       <Router>
-        <Suspense fallback = {<div> Loading... </div>}>
+        <Suspense fallback = {<div> Loading! </div>}>
             <Switch>
               <Route exact path = '/Hunger-Buddy'>
                 <App />
