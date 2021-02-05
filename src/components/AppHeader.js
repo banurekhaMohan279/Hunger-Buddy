@@ -1,4 +1,5 @@
 import {useHistory} from 'react-router-dom';
+import styles from '../App.module.css';
 
 export default function AppHeader (){
 
@@ -9,7 +10,7 @@ export default function AppHeader (){
   }
 
   return (
-    <header className = "AppHeader" onClick = {gotoHome}>
+    <header className = {styles.AppHeader} onClick = {gotoHome}>
       Hunger Buddy
       <span> A Foodie's Best Friend </span>
     </header>
