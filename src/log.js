@@ -8,6 +8,7 @@ Changes in pages for
 2. Actions/reducers
   Components/restaurants.js, entities/restaurantsApi.js, actions/restaurants.js, reducers/restaurantsReducer.js,
   reducers/rootReducer.js, index.js (provider, createStore)
+3. Normal styles -> Bootsrap styles -> CSS Modules
 
 // TODO:
 sort based on rating/cuisine
