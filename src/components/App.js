@@ -6,7 +6,6 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 function App() {
-  console.log("in appp..")
   let history = useHistory();
 
   function goToHomePage(event){
