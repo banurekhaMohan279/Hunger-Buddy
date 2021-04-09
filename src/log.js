@@ -1,5 +1,5 @@
 /*
-New modules
+Add New modules
 redux, react-redux, react-router-dom
 
 Changes in pages for
