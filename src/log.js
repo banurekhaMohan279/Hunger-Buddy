@@ -4,6 +4,7 @@ redux, react-redux, react-router-dom
 
 Changes in pages for
 1.Router
+  install react-router-dom Module
   Components/App.js, routes.js, index.js
 2. Actions/reducers
   Components/restaurants.js, entities/restaurantsApi.js, actions/restaurants.js, reducers/restaurantsReducer.js,
