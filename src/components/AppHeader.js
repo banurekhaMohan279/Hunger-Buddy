@@ -6,7 +6,7 @@ export default function AppHeader (){
   let history = useHistory();
 
   function gotoHome(){
-    history.push('/Location');
+    history.push('/Hunger-Buddy/Location');
   }
 
   return (

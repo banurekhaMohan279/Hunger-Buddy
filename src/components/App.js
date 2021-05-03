@@ -10,7 +10,7 @@ function App() {
 
   function goToHomePage(event){
     event.preventDefault();
-    history.push('/Location');
+    history.push('/Hunger-Buddy/Location');
   }
 
   return (

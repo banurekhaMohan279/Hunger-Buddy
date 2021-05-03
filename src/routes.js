@@ -16,13 +16,13 @@ export default function Routes() {
               <Route exact path = '/Hunger-Buddy'>
                 <App />
               </Route>
-              <Route path = '/Location'>
+              <Route path = '/Hunger-Buddy/Location'>
                 <Location />
               </Route>
-              <Route path = '/Restaurants' component = {Restaurants} >
+              <Route path = '/Hunger-Buddy/Restaurants' component = {Restaurants} >
               </Route>
-              <Route path = '/RestaurantDetails' component = {RestaurantDetails}>
-              </Route>
+              <Route path = '/Hunger-Buddy/RestaurantDetails' component = {RestaurantDetails}>
+              </Route>  
             </Switch>
         </Suspense>
       </Router>

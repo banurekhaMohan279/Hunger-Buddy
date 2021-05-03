@@ -19,7 +19,7 @@ function Location() {
   function locationSubmit(event) {
     event.preventDefault();
     dispatch(getCities({location})).then( () => {
-      history.push('/Restaurants')
+      history.push('/Hunger-Buddy/Restaurants')
     } );
   }
 

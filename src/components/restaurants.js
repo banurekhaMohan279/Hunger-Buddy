@@ -56,7 +56,7 @@ function Restaurants() {
 
   function getRestaurantDetail(res_id){
       dispatch(getRestaurantDetails(res_id)).then (() => {
-        history.push('/RestaurantDetails');
+        history.push('/Hunger-Buddy/RestaurantDetails');
       });
   }
 
