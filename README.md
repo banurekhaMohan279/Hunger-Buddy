@@ -14,6 +14,9 @@
 * HTML
 * CSS
 
+### Features
+* Infinite load - Interaction Observer API
+
 ### Screenshots:
 
 ![Screenshot 1](https://github.com/banurekhaMohan279/Hunger-Buddy/blob/master/src/assets/screenshot1.png)
