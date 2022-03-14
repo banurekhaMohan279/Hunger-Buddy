@@ -6,7 +6,8 @@
 
 ### ![App At Work](https://github.com/banurekhaMohan279/Hunger-Buddy/blob/master/src/assets/workingModel.gif)
 
-### Tech Stack:
+### Process Summary
+#### Tech Stack:
 
 * React JS - Redux
 * Babel
@@ -14,16 +15,10 @@
 * HTML
 * CSS
 
-### Features
+#### Features
 * Infinite load - Interaction Observer API
 
 ### The Process
-
-Extras
-SSH
-Docker
-AWS
-CI/CD
 
 #### Setup
 ##### SSR vs SPA?
