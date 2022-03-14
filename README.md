@@ -17,6 +17,87 @@
 ### Features
 * Infinite load - Interaction Observer API
 
+### The Process
+
+Extras
+SSH
+Docker
+AWS
+CI/CD
+
+#### Setup
+##### SSR vs SPA?
+- [ ] SSR with Next
+- [x] SPA with React
+##### React boilerplate?
+- [ ] With CRA
+- [x] Without CRA
+- [ ] CRA-PWA
+- [ ] Without npm - very basic
+##### Data storage?
+- [ ] Ephemeral/ Local
+- [x] Context API
+- [ ] Usereducer hook
+- [ ] Action - reducer w/o redux
+- [ ] Action - reducer with redux
+##### CSS?
+- [ ] Styled components
+- [x] CSS Modules
+- [ ] Other
+##### Host?
+- [ ] Gh pages
+- [ ] Other
+##### Persist data?
+- [ ] Hooks in local storage
+- [ ] Redis External
+##### Static type checking?
+- [ ] Lint
+- [ ] Typescript
+##### Data Visualization?
+- [ ] D3
+- [ ] Recharts
+
+### UI
+##### Layout?
+- [ ] React bootstrap
+- [ ] Material UI
+##### Responsiveness?
+- [ ] Mobile-first
+- [ ] Responsive
+- [ ] Adaptive
+##### Browser support?
+- [ ] All
+- [ ] Babel
+##### Data Visualization?
+- [ ] D3
+- [ ] Recharts
+
+### Best Practices
+##### List out features
+- [ ] Todo feature list
+##### Test cases?
+- [ ] Unit
+- [ ] Integration
+- [ ] e-to-e
+##### Performance
+- [ ] Client
+- [ ] Network
+- [ ] Backend
+##### Security
+- [ ] Injections
+- [ ] XSS + CSRF
+- [ ] Access control
+##### A11Y
+##### Folder structure
+- [ ] Naming conventions? comments?
+
+### Extras
+- [ ] AWS
+- [ ] SSH
+- [ ] Docker
+- [ ] CI/CD
+
+
 ### Screenshots:
 
 ![Screenshot 1](https://github.com/banurekhaMohan279/Hunger-Buddy/blob/master/src/assets/screenshot1.png)
